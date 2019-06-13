@@ -63,24 +63,24 @@ int main(int argc, char **argv)
      */
      
      if (pressed_key == WB_KEYBOARD_UP){
-       wb_motor_set_velocity(wheel_right, -5);
-       wb_motor_set_velocity(wheel_left, -5);
+       wb_motor_set_velocity(wheel_right, -40);
+       wb_motor_set_velocity(wheel_left, -40);
        
      }
        
      if (pressed_key == WB_KEYBOARD_LEFT){
-       wb_motor_set_velocity(wheel_right, -5);
-       wb_motor_set_velocity(wheel_left, 5);
+       wb_motor_set_velocity(wheel_right, -40);
+       wb_motor_set_velocity(wheel_left, 40);
      }
      
      if (pressed_key == WB_KEYBOARD_RIGHT){
-       wb_motor_set_velocity(wheel_right, 5);
-       wb_motor_set_velocity(wheel_left, -5);
+       wb_motor_set_velocity(wheel_right, 40);
+       wb_motor_set_velocity(wheel_left, -40);
      }
      
      if (pressed_key == WB_KEYBOARD_DOWN){
-       wb_motor_set_velocity(wheel_right, 5);
-       wb_motor_set_velocity(wheel_left, 5);
+       wb_motor_set_velocity(wheel_right, 1.33);
+       wb_motor_set_velocity(wheel_left, 1.33);
      }
        
        
@@ -95,8 +95,6 @@ int main(int argc, char **argv)
 }
 
 
-/* rad/s = (rad/s)/2pi = rps x 60 = rpm
 
-   rpm = rpm/60 = rps x 2pi = rad/s */
-
+   
 

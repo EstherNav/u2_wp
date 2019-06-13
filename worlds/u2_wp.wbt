@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Robot {
-  translation 0 0.15499999999999997 0
+  translation 0.1 0.22500000000000003 0.1
   children [
     DEF GR_Robot Group {
       children [
@@ -47,9 +47,14 @@ Robot {
         anchor -0.05 0 0.06
       }
       device [
+        PositionSensor {
+          name "position_sensor1"
+          resolution 1
+        }
         RotationalMotor {
           name "motor_right"
           maxVelocity 52.35
+          maxTorque 0
         }
       ]
       endPoint Solid {
@@ -81,6 +86,7 @@ Robot {
         RotationalMotor {
           name "motor_left"
           maxVelocity 52.35
+          maxTorque 0
         }
       ]
       endPoint Solid {
@@ -112,14 +118,16 @@ Robot {
       name "distance_sensor"
       lookupTable [
         0 0 0
-        0.05 0 0
-        2 1023 0
+        0.02 0 0
+        5 1023 0
       ]
       resolution 1
     }
   ]
+  name "robot(1)"
   boundingObject USE GR_Robot
   physics Physics {
+    density -1
     mass 5
   }
   controller "u2_wp"
