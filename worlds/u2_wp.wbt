@@ -124,3 +124,19 @@ Robot {
   }
   controller "u2_wp"
 }
+Solid {
+  translation 0.5 0.1 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.807843137254902 0.3607843137254902 0
+      }
+      geometry DEF G_BOX Box {
+        size 0.1 0.2 0.2
+      }
+    }
+  ]
+  boundingObject USE G_BOX
+  physics Physics {
+  }
+}
