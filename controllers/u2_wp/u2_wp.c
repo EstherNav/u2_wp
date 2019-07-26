@@ -12,8 +12,7 @@
 #define TIME_STEP 64
 
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   /* necessary to initialize webots stuff */
   wb_robot_init();
   
@@ -62,28 +61,27 @@ int main(int argc, char **argv)
      * wb_differential_wheels_set_speed(100.0,100.0);
      */
      
-     if (pressed_key == WB_KEYBOARD_UP){
+     if (pressed_key == WB_KEYBOARD_UP) {
        wb_motor_set_velocity(wheel_right, -40);
        wb_motor_set_velocity(wheel_left, -40);
        
      }
        
-     if (pressed_key == WB_KEYBOARD_LEFT){
+     if (pressed_key == WB_KEYBOARD_LEFT) {
        wb_motor_set_velocity(wheel_right, -40);
        wb_motor_set_velocity(wheel_left, 40);
      }
      
-     if (pressed_key == WB_KEYBOARD_RIGHT){
+     if (pressed_key == WB_KEYBOARD_RIGHT) {
        wb_motor_set_velocity(wheel_right, 40);
        wb_motor_set_velocity(wheel_left, -40);
      }
      
-     if (pressed_key == WB_KEYBOARD_DOWN){
+     if (pressed_key == WB_KEYBOARD_DOWN) {
        wb_motor_set_velocity(wheel_right, 1.33);
        wb_motor_set_velocity(wheel_left, 1.33);
      }
-       
-       
+              
   };
 
   /* Enter your cleanup code here */
